@@ -1,7 +1,7 @@
 all:
   vars:
     ansible_user: vagrant
-    lead_controller: barry
+    lead_controller: control-1
   children:
     controllers:
       hosts:
@@ -11,7 +11,7 @@ all:
         control-2:
           ansible_host: 192.168.60.102
           ansible_ssh_private_key_file: .vagrant/machines/control-2/virtualbox/private_key 
-        maurice-3:
+        control-3:
           ansible_host: 192.168.60.103
           ansible_ssh_private_key_file: .vagrant/machines/control-3/virtualbox/private_key
     workers:
