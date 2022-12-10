@@ -1,0 +1,27 @@
+all:
+  vars:
+    ansible_user: vagrant
+    lead_controller: barry
+  children:
+    controllers:
+      hosts:
+        barry:
+          ansible_host: 192.168.60.101
+          ansible_ssh_private_key_file: .vagrant/machines/control-1/virtualbox/private_key
+        robin:
+          ansible_host: 192.168.60.102
+          ansible_ssh_private_key_file: .vagrant/machines/control-2/virtualbox/private_key 
+        maurice:
+          ansible_host: 192.168.60.103
+          ansible_ssh_private_key_file: .vagrant/machines/control-3/virtualbox/private_key
+    workers:
+      hosts:
+        diana:
+          ansible_host: 192.168.60.111
+          ansible_ssh_private_key_file: .vagrant/machines/worker-1/virtualbox/private_key
+        florence:
+          ansible_host: 192.168.60.112
+          ansible_ssh_private_key_file: .vagrant/machines/worker-2/virtualbox/private_key
+        mary:
+          ansible_host: 192.168.60.113
+          ansible_ssh_private_key_file: .vagrant/machines/worker-3/virtualbox/private_key

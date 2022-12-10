@@ -1,0 +1,11 @@
+---
+- name: Provision Kubernetes Cluster to Vagrant Machines
+  hosts: all
+  become: true
+  gather_facts: true
+  roles:
+    - role: gadgieOps.ha-kubernetes
+      vars:
+      - taint_controllers: false
+      - set_host_kubeconfig: true
+      - node_name: "{{ inventory_hostname }}"

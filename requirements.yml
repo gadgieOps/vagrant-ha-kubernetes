@@ -1,0 +1,3 @@
+---
+- src: https://github.com/gadgieOps/ha-kubernetes.git
+  name: gadgieOps.ha-kubernetes
